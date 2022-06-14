@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!--user정보 ui-->
+    <ImageView
+        android:id="@+id/userIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/user"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/coffee_dark_brown"
+        android:fontFamily="@font/eland_choice_b"
+        android:layout_marginTop="10dp"
+        android:textSize="35dp"
+        app:layout_constraintLeft_toRightOf="@+id/userIcon"
+        app:layout_constraintRight_toLeftOf="@+id/btn_logout"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요"
+        android:textColor="@color/coffee_brown"
+        android:textSize="20dp"
+        android:fontFamily="@font/eland_choice_l"
+        app:layout_constraintLeft_toRightOf="@id/userIcon"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"/>
+
+
+    <!--등급 정보 ui-->
+    <ImageView
+        android:id="@+id/imgLevel"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/seeds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userIcon"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/levelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="씨앗 2단계"
+        android:fontFamily="@font/eland_choice_b"
+        android:textSize="20dp"
+        android:textColor="@color/coffee_dark_brown"
+        app:layout_constraintLeft_toRightOf="@id/imgLevel"
+        app:layout_constraintTop_toBottomOf="@id/userIcon"
+        android:layout_marginTop="30dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:progress="1"
+        android:progressTint="@color/coffee_point_red"
+        android:progressBackgroundTint="@color/coffee_light_gray"
+        android:max="10"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        app:layout_constraintEnd_toStartOf="@id/remainLevel"
+        app:layout_constraintStart_toEndOf="@id/levelName"
+        app:layout_constraintTop_toBottomOf="@id/userIcon"/>
+<!--    <View-->
+<!--        android:id="@+id/line"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:background="@color/coffee_light_gray"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/remainLevel"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/levelName"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/userIcon" />-->
+    <TextView
+        android:id="@+id/remainLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2/10"
+        android:textColor="@color/coffee_dark_brown"
+        android:fontFamily="@font/eland_choice_b"
+        app:layout_constraintTop_toBottomOf="@id/userIcon"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toRightOf="@id/progressbar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_remain_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/eland_choice_b"
+        android:text="다음 레벨까지 8단계 남았습니다."
+        android:textColor="@color/coffee_light_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLevel" />
+
+
+    <!--주문 내역 ui-->
+    <ImageView
+        android:id="@+id/btn_logout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/logout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@id/txtName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/coffeeBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/space"
+        app:layout_constraintBottom_toTopOf="@id/textOrderDetail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_remain_textView" />
+
+    <TextView
+        android:id="@+id/textOrderDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="주문내역"
+        android:textColor="@color/coffee_dark_brown"
+        android:textSize="30dp"
+        android:fontFamily="@font/cafe24_ssurround"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coffeeBanner"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textOrderDetail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

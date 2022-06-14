@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9E9E9"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/coffee_banner_login" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:context=".JoinActivity">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@id/joinID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtJoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join"
+            android:textSize="50dp"
+            android:fontFamily="@font/eland_choice_m"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintBottom_toTopOf="@id/joinID"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/coffee_dark_brown"/>
+
+        <EditText
+            android:id="@+id/joinID"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:inputType="text"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_check"
+            app:layout_constraintTop_toBottomOf="@id/txtJoin"
+            app:layout_constraintBottom_toTopOf="@id/joinPW"
+            android:hint="아이디를 입력하세요."
+            android:paddingLeft="10dp"
+            android:textColorHighlight="@color/coffee_brown"
+            android:textColorHint="@color/coffee_dark_brown"
+            android:backgroundTint="@color/coffee_dark_brown">
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/btn_check"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintLeft_toRightOf="@+id/joinID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtJoin"
+            app:layout_constraintBottom_toTopOf="@id/joinPW"
+            android:background="@drawable/button_non_color"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:src="@drawable/check_mark">
+        </ImageButton>
+
+
+        <EditText
+            android:id="@+id/joinPW"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/joinID"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:hint="비밀번호를 입력하세요."
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/coffee_dark_brown"
+            android:backgroundTint="@color/coffee_dark_brown"
+            />
+
+        <EditText
+            android:id="@+id/joinNickname"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/joinPW"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:hint="별명을 입력하세요."
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/coffee_dark_brown"
+            android:backgroundTint="@color/coffee_dark_brown"/>
+
+        <Button
+            android:id="@+id/btn_join"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/joinNickname"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/button_regular"
+            android:text="JOIN"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

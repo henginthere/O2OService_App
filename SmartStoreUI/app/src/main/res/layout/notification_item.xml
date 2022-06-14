@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_notiContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 적립한 스탬프 개수는 5개 입니다."
+        android:textSize="15dp"
+        android:textColor="@color/coffee_brown"
+        android:fontFamily="@font/eland_choice_b"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <ImageButton
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/indicator"
+        android:src="@drawable/ic_baseline_clear_24"/>
+</LinearLayout>

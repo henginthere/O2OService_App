@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SmartStoreUI</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="api_key">AIzaSyDYW-Lkws57JajUnjK5Wb9FfwNkwgouYfo</string>
+    <string name="google_login_key">1095661734831-1dik1iogsk27a15i31ftq8rrber3loid.apps.googleusercontent.com</string>
+    <string name="kakao_app_key">7d483998460cbc0aa52f4e3594a0b102</string>
+    <string name="facebook_app_id">5662383180456646</string>
+    <string name="fb_login_protocol_scheme">fb5662383180456646</string>
+    <string name="facebook_client_token">9616ccd50db24b42f5f29e004b8ed034</string>
+
+</resources>

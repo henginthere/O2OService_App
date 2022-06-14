@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuDetailActivity">
+
+    <ImageView
+        android:id="@+id/coffee_img"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/coffee_img_back"
+        android:src="@drawable/coffee1"/>
+
+    <TextView
+        android:id="@+id/coffee_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="아메리카노"
+        android:fontFamily="@font/eland_choice_m"
+        android:textColor="@color/coffee_dark_brown"
+        android:textSize="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/coffee_img"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가격"
+        android:textColor="@color/coffee_dark_brown"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/coffee_name"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/coffee_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4,000원"
+        android:textColor="@color/coffee_dark_brown"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/coffee_name"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수량"
+        android:textColor="@color/coffee_dark_brown"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_price"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coffee_price"
+        android:layout_marginEnd="20dp">
+
+        <ImageButton
+            android:id="@+id/btn_minus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/minus"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/coffee_price"
+            app:layout_constraintStart_toEndOf="@+id/tv_quantity"
+            app:layout_constraintEnd_toStartOf="@+id/coffee_quantity"
+            app:tint="@color/coffee_point_red" />
+
+        <TextView
+            android:id="@+id/coffee_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1"
+            android:textColor="@color/coffee_dark_brown"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+            app:layout_constraintStart_toEndOf="@+id/btn_minus"
+            app:layout_constraintTop_toBottomOf="@+id/coffee_price" />
+
+        <ImageButton
+            android:id="@+id/btn_plus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/plus"
+            app:tint="@color/coffee_point_red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coffee_quantity"
+            app:layout_constraintTop_toBottomOf="@+id/coffee_price" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_quantity"
+        android:background="@color/coffee_img_back"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평점"
+            android:textColor="@color/coffee_dark_brown"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:id="@+id/tv_product_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="등록된 평점이 없습니다."
+            android:textColor="@color/coffee_dark_brown"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"/>
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="5dp"
+            android:numStars="5"
+            android:rating="0.0"
+            android:progressTint="@color/coffee_point_red"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/review"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/rating"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_addReview"
+        android:hint="상품평을 입력하세요."
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/coffee_light_gray"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_border"/>
+
+    <Button
+        android:id="@+id/btn_addReview"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="등록"
+        android:textColor="@color/coffee_dark_brown"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintLeft_toRightOf="@id/review"
+        app:layout_constraintTop_toBottomOf="@+id/rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_go_order"
+        />
+    <TextView
+        android:id="@+id/tv_isFirstComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="첫번째 평점을 등록해보세요!"
+        android:textColor="@color/coffee_dark_brown"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_addReview"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_addShoppingList"
+        app:layout_constraintTop_toBottomOf="@id/review"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <Button
+        android:id="@+id/btn_addShoppingList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/coffee_point_red"
+        android:text="담기"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

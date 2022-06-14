@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1095661734831",
+    "project_id": "mycoffeeapp-351101",
+    "storage_bucket": "mycoffeeapp-351101.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095661734831:android:6c098203104c139aab7d5a",
+        "android_client_info": {
+          "package_name": "com.ssafy.smartstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095661734831-f08v7vpuqleqssg5qdk7oi62c3j575sh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ssafy.smartstore",
+            "certificate_hash": "dc0f0fddf33171d4a34e24be40265f835260ed48"
+          }
+        },
+        {
+          "client_id": "1095661734831-gsgoeq0rpdkiu44nnumfgkceilfoo10e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ssafy.smartstore",
+            "certificate_hash": "c8d61157333ca1c787c0e7d0f60b8618145db270"
+          }
+        },
+        {
+          "client_id": "1095661734831-1dik1iogsk27a15i31ftq8rrber3loid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBT_EAhUp-uAyCvSxyfpNiJy2-OzOm2hsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095661734831-1dik1iogsk27a15i31ftq8rrber3loid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

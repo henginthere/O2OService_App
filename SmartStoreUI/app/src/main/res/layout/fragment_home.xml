@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <!--user info ui-->
+    <TextView
+        android:id="@+id/txt_userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="김싸피님"
+        android:textSize="30dp"
+        android:textColor="@color/coffee_dark_brown"
+        android:fontFamily="@font/eland_choice_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좋은 하루 보내세요🥰"
+        android:textSize="20dp"
+        android:textColor="@color/coffee_brown"
+        android:fontFamily="@font/eland_choice_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_userName"/>
+
+    <!--알림판 ui-->
+    <TextView
+        android:id="@+id/tv_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="알림판"
+        android:textSize="30dp"
+        android:textColor="@color/coffee_dark_brown"
+        android:fontFamily="@font/eland_choice_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hi"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notify_listView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_non_color"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_notify"></androidx.recyclerview.widget.RecyclerView>
+
+    <!--최근 주문-->
+    <TextView
+        android:id="@+id/tv_recent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="최근 주문"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/eland_choice_b"
+        android:textColor="@color/coffee_dark_brown"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notify_listView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_recent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

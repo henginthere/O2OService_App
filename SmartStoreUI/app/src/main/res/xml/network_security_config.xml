@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 전체 도메인 허용 -->
+    <!--<base-config cleartextTrafficPermitted="true" />-->
+
+    <!-- 특정 도메인만 허용 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.219.101</domain>
+        <domain includeSubdomains="true">192.168.123.106</domain>
+        <domain includeSubdomains="true">192.168.123.107</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <domain includeSubdomains="true">192.168.35.53</domain>
+        <domain includeSubdomains="true">172.20.10.10</domain>
+    </domain-config>
+
+</network-security-config>

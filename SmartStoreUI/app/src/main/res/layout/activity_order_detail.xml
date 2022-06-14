@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".OrderDetailActivity">
+
+    <TextView
+        android:id="@+id/tv_orderDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주문상세"
+        android:textColor="@color/coffee_point_red"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:fontFamily="@font/eland_choice_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/order_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orderDetail"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="주문완료"
+            android:textColor="@color/coffee_dark_brown"
+            android:fontFamily="@font/cafe24_ssurround"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/orderDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2021.05.01"
+            android:textColor="@color/coffee_dark_brown"
+            android:fontFamily="@font/cafe24_ssurround"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/orderPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12,500원"
+            android:textColor="@color/coffee_dark_brown"
+            android:fontFamily="@font/cafe24_ssurround"
+            android:textSize="20dp"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detail_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_info" />
+
+    <Button
+        android:id="@+id/btn_backToHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="홈으로 돌아가기"
+        android:fontFamily="@font/eland_choice_b"
+        android:textSize="16dp"
+        android:background="@color/coffee_brown"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
